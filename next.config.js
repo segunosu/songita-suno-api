@@ -3,13 +3,13 @@ const nextConfig = {
   webpack: (config) => {
     config.module.rules.push({
       test: /\.(ttf|html)$/i,
-      type: 'asset/resource'
+      type: 'asset/resource',
     });
     return config;
   },
   experimental: {
-    serverMinification: false, // the server minification unfortunately breaks the selector class names
+    serverMinification: false, // this keeps your class names from breaking
   },
-};  
+};
 
-export default nextConfig;
+module.exports = nextConfig;
